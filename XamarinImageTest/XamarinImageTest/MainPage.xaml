@@ -4,13 +4,15 @@
              xmlns:local="clr-namespace:XamarinImageTest"
              xmlns:ff="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
              x:Class="XamarinImageTest.MainPage"
-             BackgroundColor="#000000">
+             BackgroundColor="#000000"
+             Padding="10">
 
     <ContentPage.Content>
         <ScrollView HorizontalOptions="Fill"
                     VerticalOptions="Fill">
             <StackLayout HorizontalOptions="Fill" VerticalOptions="Fill">
-                <Entry x:Name="txtSource" HorizontalOptions="Fill" BackgroundColor="#fff" Margin="0, 30, 0, 0"></Entry>
+                <Label HorizontalOptions="Fill" Text="URL :" TextColor="#fff"></Label>
+                <Entry x:Name="txtSource" HorizontalOptions="Fill" BackgroundColor="#fff"></Entry>
                 <Button x:Name="btnSetSource" 
                     Clicked="btnSetSource_Clicked" 
                     Text="Test" 
@@ -25,19 +27,16 @@
                     HeightRequest="60"></Button>
                 <Label HorizontalOptions="Fill" Text="Xamarin Image :" TextColor="#fff"></Label>
                 <Image x:Name="imgTest"
-                    Source="" 
                     HorizontalOptions="Fill" 
                     HeightRequest="250"
                     Aspect="AspectFit"></Image>
                 <Label HorizontalOptions="Fill" Text="FFImageLoading CachedImage :" TextColor="#fff"></Label>
                 <ff:CachedImage x:Name="imgCachedTest"
-                                Source="https://i.ytimg.com/vi/JTxPzXQ1Sso/maxresdefault.jpg"
                                 HorizontalOptions="Fill"
                                 HeightRequest="250">
                 </ff:CachedImage>
                 <Label x:Name="lblMessage"
-                       BackgroundColor="White"
-                   TextColor="#fff"
+                       Text="#fff"
                    HorizontalOptions="Fill"
                    HeightRequest="50"></Label>
             </StackLayout>
