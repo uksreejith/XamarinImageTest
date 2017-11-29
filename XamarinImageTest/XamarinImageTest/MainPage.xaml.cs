@@ -20,6 +20,9 @@ namespace XamarinImageTest
             {
                 imgTest.Source = "";
                 imgTest.Source = txtSource.Text;
+
+                imgCachedTest.Source = "";
+                imgCachedTest.Source = txtSource.Text;
             }
             catch (Exception ex)
             {
@@ -32,8 +35,10 @@ namespace XamarinImageTest
             try
             {
                 txtSource.Text = "";
+
                 imgTest.Source = "";
-                imgTest.Source = txtSource.Text;
+                imgCachedTest.Source = "";
+
                 txtSource.Focus();
             }
             catch (Exception ex)
