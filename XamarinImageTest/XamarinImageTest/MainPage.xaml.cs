@@ -13,5 +13,33 @@ namespace XamarinImageTest
         {
             InitializeComponent();
         }
+
+        private void btnSetSource_Clicked(object sender, EventArgs e)
+        {
+            try
+            {
+                imgTest.Source = "";
+                imgTest.Source = txtSource.Text;
+            }
+            catch (Exception ex)
+            {
+                lblMessage.Text = ex.Message;
+            }
+        }
+
+        private void btnClear_Clicked(object sender, EventArgs e)
+        {
+            try
+            {
+                txtSource.Text = "";
+                imgTest.Source = "";
+                imgTest.Source = txtSource.Text;
+                txtSource.Focus();
+            }
+            catch (Exception ex)
+            {
+                lblMessage.Text = ex.Message;
+            }
+        }
     }
 }

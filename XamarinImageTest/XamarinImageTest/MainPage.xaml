@@ -2,10 +2,35 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:XamarinImageTest"
-             x:Class="XamarinImageTest.MainPage">
+             x:Class="XamarinImageTest.MainPage"
+             BackgroundColor="#000000">
 
-	<Label Text="Welcome to Xamarin Forms!" 
-           VerticalOptions="Center" 
-           HorizontalOptions="Center" />
+    <ContentPage.Content>
+        <StackLayout HorizontalOptions="Fill" VerticalOptions="Fill">
+            <Entry x:Name="txtSource" HorizontalOptions="Fill" BackgroundColor="#fff" Margin="0, 30, 0, 0"></Entry>
+            <Button x:Name="btnSetSource" 
+                    Clicked="btnSetSource_Clicked" 
+                    Text="Test" 
+                    HorizontalOptions="Fill" 
+                    Margin="5" 
+                    HeightRequest="60"></Button>
+            <Button x:Name="btnClear" 
+                    Clicked="btnClear_Clicked" 
+                    Text="Clear" 
+                    HorizontalOptions="Fill" 
+                    Margin="5" 
+                    HeightRequest="60"></Button>
+            <Image x:Name="imgTest"
+                    Source="" 
+                    HorizontalOptions="Fill" 
+                    VerticalOptions="FillAndExpand"
+                    Aspect="AspectFit"></Image>
+            <Label x:Name="lblMessage"
+                   TextColor="#fff"
+                   HorizontalOptions="Fill"
+                   HeightRequest="50"></Label>
+        </StackLayout>
+    </ContentPage.Content>
+    
 
 </ContentPage>
